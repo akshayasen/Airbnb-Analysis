@@ -1,53 +1,69 @@
-# Airbnb-Analysis
+#  Airbnb-Analysis
 
-Problem Statement : 
+##   Problem Statement
 
 The pricing and availability of Airbnb listings vary based on multiple factors such as room type, accommodation size, and cancellation policies. Understanding these patterns can help optimize pricing strategies, improve customer satisfaction, and maximize revenue.
 
-Objective : 
+---
 
-The main goal of this analysis is to explore how different factors like room type, cleaning fees, and cancellation policies impact the pricing of Airbnb listings. By analyzing patterns in the dataset, we aim to derive insights that can help hosts and potential customers make informed decisions.
+##  Objective
 
-Dataset : 
+The main goal of this analysis is to explore how different factors—like room type, cleaning fees, and cancellation policies—impact the pricing of Airbnb listings. By analyzing patterns in the dataset, we aim to derive insights that help both hosts and potential customers make informed decisions.
 
-The dataset contains Airbnb listing details, including features such as:
+---
 
-log_price: The logarithm of the listing price
+##  Dataset Description
 
-room_type: Type of room (Entire home/apt, Private room, Shared room)
+The dataset contains various details of Airbnb listings, including the following key features:
 
-accommodates: Number of people the listing can accommodate
+- `log_price`: The natural logarithm of the listing price  
+- `room_type`: Type of room (`Entire home/apt`, `Private room`, `Shared room`)  
+- `accommodates`: Number of people the listing can accommodate  
+- `cancellation_policy`: Type of cancellation policy (`Flexible`, `Moderate`, `Strict`)  
+- `cleaning_fee`: Whether a cleaning fee is charged (`True`/`False`)  
 
-cancellation_policy: Type of cancellation policy (Flexible, Moderate, Strict)
+---
 
-cleaning_fee: Whether a cleaning fee is charged (True/False)
+##  Data Analysis
 
-Data Analysis : 
+###  Univariate Analysis
 
-Univariate Analysis : 
+- The `log_price` distribution is **right-skewed**, indicating most listings have **lower prices**.
+- Most listings are categorized under **Entire home/apartments**.
+- The **standard deviation** of `log_price` shows **moderate variation** in pricing across listings.
 
-The log_price distribution is right-skewed, indicating that most listings have lower prices.
+###  Bivariate Analysis
 
-Room type distribution shows that most listings are Entire home/apartments.
+- The **correlation** between `accommodates` and `log_price` is **0.56**, indicating a **moderate positive relationship**.
+- **Box plots** reveal that **Entire home/apartments** have significantly **higher prices** than Private or Shared rooms.
+- **Cross-tabulation** between `room_type` and `cancellation_policy` shows **stricter policies** are more common in **Entire home/apartments**.
 
-The standard deviation of log_price suggests moderate variation in pricing across listings.
+---
 
-Bivariate Analysis : 
+##  Key Insights
 
-The correlation between accommodates and log_price is 0.56, indicating a moderate positive relationship.
+- **Entire home/apartments** tend to have the **highest prices**, while **shared rooms** are the **cheapest**.
+- **Larger accommodations** generally lead to **higher prices**, suggesting hosts can optimize revenue by **hosting more guests**.
+- **Stricter cancellation policies** are more common for **high-priced listings**, likely used to **protect host revenue**.
 
-Box plots revealed that Entire home/apartments have higher prices than private or shared rooms.
+---
 
-Cross-tabulation between room_type and cancellation_policy showed that stricter policies are more common in Entire home/apartments.
+##  Conclusion
 
-Key Insights : 
+This analysis provides a clear understanding of how pricing is influenced by various factors in Airbnb listings:
 
-Entire home/apartments tend to have the highest prices, while shared rooms are the cheapest.
+- Helps hosts **optimize pricing** strategies.
+- Supports decision-making for **appropriate cancellation policies**.
+- Reveals actionable insights to improve **customer satisfaction** and **profitability**.
 
-Larger accommodations generally lead to higher prices, suggesting that hosts can optimize revenue by accommodating more guests.
+**Future Scope**: The study can be extended to include **location**, **guest reviews**, and **seasonality trends** to further enhance the pricing strategy and overall customer experience.
 
-Stricter cancellation policies are more common for high-priced listings, likely to protect host revenue.
+---
 
-Conclusion : 
+## 🛠 Tools Used
 
-This analysis provided a clear understanding of how pricing is influenced by different factors in Airbnb listings. Insights from the study can help hosts optimize their pricing strategies and set appropriate cancellation policies. Future work can explore additional factors like location and guest reviews for deeper insights.
+- Python (Pandas, NumPy, Matplotlib, Seaborn)
+- Jupyter Notebook
+- CSV for data storage
+
+    └── price_distribution.png     # Optional images for visuals (add screenshots here)

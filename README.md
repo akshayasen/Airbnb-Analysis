@@ -66,4 +66,4 @@ This analysis provides a clear understanding of how pricing is influenced by var
 - Jupyter Notebook
 - CSV for data storage
 
-    └── price_distribution.png     # Optional images for visuals (add screenshots here)
+    
